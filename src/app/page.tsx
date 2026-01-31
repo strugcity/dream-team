@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { createClient } from '@supabase/supabase-js'
+import AgentPulse from '@/components/AgentPulse'
 
 // Create supabase client directly to avoid any import issues
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || ''
@@ -125,12 +126,8 @@ export default function GodViewDashboard() {
             <h1 className="text-2xl font-bold">SABINE Control</h1>
             <p className="text-gray-400">God View Dashboard</p>
           </div>
-          <div className="flex items-center gap-2">
-            <div className={`w-3 h-3 rounded-full ${isConnected ? 'bg-green-400' : 'bg-red-400'}`} />
-            <span className="text-sm text-gray-400">
-              {isConnected ? 'Connected' : 'Disconnected'}
-            </span>
-          </div>
+          {/* Live Pulse Badge - shows latest agent activity */}
+          <AgentPulse />
         </div>
       </header>
 
