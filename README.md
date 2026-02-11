@@ -127,7 +127,7 @@ The dashboard requires two PostgreSQL tables in your Supabase project:
 1. **task_queue**: Stores task information and status
 2. **agent_events**: Stores real-time agent activity logs
 
-Refer to `docs/architecture/PROJECT_ATLAS.md` for detailed entity relationship diagrams and schema information.
+Refer to [`docs/architecture/PROJECT_ATLAS.md`](docs/architecture/PROJECT_ATLAS.md) for detailed entity relationship diagrams and schema information.
 
 ### Development
 
